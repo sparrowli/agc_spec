@@ -330,7 +330,7 @@ int WebRtcAgc_VirtualMic(void* agcInst,
   if ((frameNrg < 500) || (numZeroCrossing <= 5)) {
     stt->lowLevelSignal = 1;
   } else if (numZeroCrossing <= kZeroCrossingLowLim) {
-    stt->lowLevelSignal = 0;
+    stt->lowLevelSignal = 1;
   } else if (frameNrg <= frameNrgLimit) {
     stt->lowLevelSignal = 1;
   } else if (numZeroCrossing >= kZeroCrossingHighLim) {
