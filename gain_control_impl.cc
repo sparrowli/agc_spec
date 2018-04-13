@@ -2,10 +2,6 @@
 
 #include "digital_agc/gain_control.h"
 
-#include <stdio.h>
-#include <iostream>
-using namespace std;
-
 namespace mixerengine {
 
 typedef void Handle;
@@ -31,7 +27,7 @@ class GainControlImpl::GainController {
 		state_ = WebRtcAgc_Create();
 		if (0 == state_)
 		{
-			printf("%s:%d Check failed\n", __FILE__, __LINE__);
+			//printf("%s:%d Check failed\n", __FILE__, __LINE__);
 		}
 	}
 
@@ -56,19 +52,13 @@ class GainControlImpl::GainController {
 		if (0 == state_)
 			return;
 
-		cout<<" min_capture_level="<<minimum_capture_level;
-		cout<<" max_capture_level="<<maximum_capture_level;
-		cout<<" mode="<<mode;
-		cout<<" sample_rate_hz="<<sample_rate_hz;
-		cout<<" capture_level="<<capture_level;
-		cout<<endl;
 		int error = 
 			WebRtcAgc_Init(state_, minimum_capture_level, maximum_capture_level,
 					MapSetting(mode), sample_rate_hz);
 
 		if (0 != error)
 		{
-			printf("%s:%d WebRtcAgc_Init failed.\n", __FILE__, __LINE__);
+			//printf("%s:%d WebRtcAgc_Init failed.\n", __FILE__, __LINE__);
 		}
 
 		set_capture_level(capture_level);
@@ -418,7 +408,6 @@ void GainControlImpl::Initialize(size_t num_proc_channels, int sample_rate_hz) {
 	gain_controller_->Initialize(minimum_capture_level_, maximum_capture_level_,
 			                        mode_, sample_rate_hz_, analog_capture_level_);
 
-	cout<<"gain_control_impl initialize(0, 255, digital, 8000, 0)"<<endl;
 	Configure();
 }
 
