@@ -18,14 +18,5 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
 	)
 
-#[[
-#include_directories ("${PROJECT_SOURCE_DIR}/digital_agc")
-#add_subdirectory (digital_agc)
-#add_subdirectory(agc)
-#include_directories ("${PROJECT_SOURCE_DIR}/common_audio")
-#add_subdirectory (common_audio)
 
-#add_library (audio_processing ${DIR_SRCS})
 add_library (audio_processing ${PROJECT_SOURCE_FILES})
-#target_link_libraries(audio_processing)
-#target_link_libraries(audio_processing digital_agc wav_file)
