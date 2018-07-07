@@ -5166,7 +5166,7 @@ def CheckCasts(filename, clean_lines, linenum, error):
   # probably a member operator declaration or default constructor.
   match = Search(
       r'(\bnew\s+(?:const\s+)?|\S<\s*(?:const\s+)?)?\b'
-      r'(int|float|double|bool|char|int32|uint32|int64|uint64)'
+      r'(size_t|ptrdiff_t|int|float|double|bool|char|int32|uint32|int64|uint64)'
       r'(\([^)].*)', line)
   expecting_function = ExpectingFunctionArgs(clean_lines, linenum)
   if match and not expecting_function:
@@ -5211,7 +5211,7 @@ def CheckCasts(filename, clean_lines, linenum, error):
 
   if not expecting_function:
     CheckCStyleCast(filename, clean_lines, linenum, 'static_cast',
-                    r'\((int|float|double|bool|char|u?int(16|32|64))\)', error)
+                    r'\((size_t|ptrdiff_t|int|float|double|bool|char|u?int(16|32|64))\)', error)
 
   # This doesn't catch all cases. Consider (const char * const)"hello".
   #
