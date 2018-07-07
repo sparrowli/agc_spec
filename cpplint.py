@@ -4739,10 +4739,10 @@ def CheckLanguage(filename, clean_lines, linenum, file_extension,
       error(filename, linenum, 'runtime/int', 4,
             'Use "unsigned short" for ports, not "short"')
   else:
-    match = Search(r'\b(short|long(?! +double)|long long)\b', line)
+    match = Search(r'\b(short|int|long(?! +double)|long long)\b', line)
     if match:
       error(filename, linenum, 'runtime/int', 4,
-            'Use int16/int64/etc, rather than the C type %s' % match.group(1))
+            'Use int16/int32/int64/etc, rather than the C type %s' % match.group(1))
 
   # Check if some verboten operator overloading is going on
   # TODO(unknown): catch out-of-line unary operator&:
