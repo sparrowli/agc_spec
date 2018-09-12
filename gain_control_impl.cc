@@ -44,7 +44,7 @@ class GainControlImpl::GainController {
 		return state_;
 	}
 
-	void Initialize(int minimum_capture_level,
+  void Initialize(int minimum_capture_level,
 			            int maximum_capture_level,
 									Mode mode,
 									int sample_rate_hz,
@@ -82,11 +82,12 @@ int GainControlImpl::instance_counter_ = 0;
 GainControlImpl::GainControlImpl()
     : //data_dumper_(NULL/*new ApmDataDumper(instance_counter_)*/),
 			enabled_(false),
-		  mode_(kAdaptiveDigital),
+		  mode_(kFixedDigital),
+		  // mode_(kAdaptiveDigital),
 			minimum_capture_level_(0),
 			maximum_capture_level_(255),
 			limiter_enabled_(true),
-			target_level_dbfs_(4),
+			target_level_dbfs_(2),
 			compression_gain_db_(9),
 			analog_capture_level_(0),
 			was_analog_level_set_(false),
@@ -131,7 +132,9 @@ int GainControlImpl::ProcessCaptureAudio(int16_t* audio) {
 	}
 
 	// To-Do: only support kAdaptiveDigital
-	if (mode_ == kAdaptiveAnalog || mode_ == kFixedDigital) {
+	// if (mode_ == kAdaptiveAnalog || mode_ == kFixedDigital) {
+	// Support both kAdaptiveDigital and kFixedDigital
+	if (mode_ == kAdaptiveAnalog) {
 		return AudioProcessing::kUnsupportedFunctionError;
 	}
 
