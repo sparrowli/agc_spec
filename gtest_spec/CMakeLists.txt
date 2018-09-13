@@ -16,8 +16,14 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/digital_agc/signal_processing_library.c
 	${PROJECT_SOURCE_DIR}/common_audio/wav_file.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
+	${PROJECT_SOURCE_DIR}/base/checks.cc
+	${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
+	${PROJECT_SOURCE_DIR}/tools/input_audio_file.cc
+	${PROJECT_SOURCE_DIR}/tools/input_audio_file_unittest.cc
 	${CMAKE_CURRENT_SOURCE_DIR}/test_spec.cc
 	)
+
+set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -g -ftest-coverage -fprofile-arcs")
 
 find_library (
     GTEST_LIB
