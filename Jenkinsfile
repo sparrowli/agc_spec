@@ -19,7 +19,6 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh '
         sh '''
           echo "cd gtest_spec/release"
           if [! -d ./gtest_spec/release]; then
