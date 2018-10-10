@@ -4,9 +4,10 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-          # if [! -d ./release]; then
+          #!/bin/sh
+          if [ ! -d ./release ]; then
             mkdir -p release
-          # fi
+          fi
           echo "cd release"
           cd release
 
@@ -26,6 +27,9 @@ pipeline {
             mkdir -p ./gtest_spec/release
           fi
           cd gtest_spec/release
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+          make
+          ./test_spec
         '''
       }
     }
