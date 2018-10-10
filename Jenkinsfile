@@ -16,9 +16,9 @@ pipeline {
     stage('Test') {
       steps {
         sh 'echo "cd gtest_spec"'
-        sh ```
+        sh '''
           cd gtest_spec/release
-        ```
+        '''
       }
     }
   }
