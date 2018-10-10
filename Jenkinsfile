@@ -27,7 +27,7 @@ pipeline {
             mkdir -p ./gtest_spec/release
           fi
           cd gtest_spec/release
-          cmake -DCMAKE_BUILD_TYPE=Release ..
+          /usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Release ..
           make
           ./test_spec
         '''
