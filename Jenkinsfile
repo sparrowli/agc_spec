@@ -28,6 +28,9 @@ pipeline {
       steps {
         sh '''
           #!/bin/sh
+          export LDFLAGS="/usr/local/opt/openssl/lib"
+          export CPPFLAGS="/usr/local/opt/openssl/include"
+          
           if [ ! -f ./abseil-cpp/CMakeLists.txt ]; then
             git submodule update --init --recursive
           fi
