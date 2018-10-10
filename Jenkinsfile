@@ -1,5 +1,11 @@
 pipeline {
   agent any
+
+  environment {
+    LDFLAGS = '/usr/local/opt/openssl/lib'
+    CPPFLAGS = '/usr/local/opt/openssl/include'
+  }
+
   stages {
     stage('Build') {
       steps {
