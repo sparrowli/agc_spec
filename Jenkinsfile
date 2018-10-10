@@ -1,20 +1,24 @@
 pipeline {
-  agent {
-    docker { image 'node:7-alpine' }
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
-        sh 'echo "Hello World"'
+        sh 'echo "cd release"'
+        sh 'cd release'
         sh '''
-          echo "Multiline shell steps work too"
-          ls -lah
+          echo "cmake generate Makefile"
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+          echo "make build release version configured by cmake"
+          make
         '''
       }
     }
     stage('Test') {
       steps {
-        sh 'node --version'
+        sh 'echo "cd gtest_spec"'
+        sh ```
+          cd gtest_spec/release
+        ```
       }
     }
   }
