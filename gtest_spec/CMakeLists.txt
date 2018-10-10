@@ -197,7 +197,9 @@ include_directories (${PROJECT_SOURCE_DIR}
   "${PROJECT_SOURCE_DIR}/include"
 	"/usr/local/opt/openssl/"
 	)
-link_directories (${PROJECT_SOURCE_DIR}/lib)
+link_directories (${PROJECT_SOURCE_DIR}/lib
+	"/usr/local/opt/openssl/lib"
+	)
 
 add_executable (test_spec ${PROJECT_SOURCE_FILES})
 #target_link_libraries(test_spec PUBLIC ${GTEST_LIB})
