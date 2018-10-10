@@ -11,7 +11,7 @@ pipeline {
           cd release
 
           echo "cmake generate Makefile"
-          cmake -DCMAKE_BUILD_TYPE=Release ..
+          /usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Release ..
           echo "make build release version configured by cmake"
           make
         '''
