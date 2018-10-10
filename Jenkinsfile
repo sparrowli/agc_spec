@@ -4,10 +4,10 @@ pipeline {
     stage('Build') {
       steps {
         sh '''
-          if [! -d ./release]; then
-            mkdir release
-          fi
-          echo "cd release"'
+          # if [! -d ./release]; then
+            mkdir -p release
+          # fi
+          echo "cd release"
           cd release
 
           echo "cmake generate Makefile"
