@@ -194,7 +194,9 @@ message(STATUS "GTEST_LIB: [${GTEST_LIB}]")
 
 
 include_directories (${PROJECT_SOURCE_DIR}
-  "${PROJECT_SOURCE_DIR}/include")
+  "${PROJECT_SOURCE_DIR}/include"
+	"/usr/local/opt/openssl/"
+	)
 link_directories (${PROJECT_SOURCE_DIR}/lib)
 
 add_executable (test_spec ${PROJECT_SOURCE_FILES})
