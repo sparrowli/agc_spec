@@ -22,6 +22,7 @@ pipeline {
       steps {
         sh '''
           #!/bin/sh
+          git submodule update --init --recursive
           echo "cd gtest_spec/release"
           if [ ! -d ./gtest_spec/release ]; then
             mkdir -p ./gtest_spec/release
