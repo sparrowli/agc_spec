@@ -20,6 +20,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''
+          #!/bin/sh
           echo "cd gtest_spec/release"
           if [! -d ./gtest_spec/release]; then
             mkdir -p ./gtest_spec/release
