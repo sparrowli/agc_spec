@@ -33,6 +33,9 @@ pipeline {
           echo "cd gtest_spec/release"
           if [ ! -d ./gtest_spec/release ]; then
             mkdir -p ./gtest_spec/release
+          else
+            rm -rf ./gtest_spec/release
+            mkdir -p ./gtest_spec/release
           fi
           cd gtest_spec/release
           /usr/local/bin/cmake -DCMAKE_BUILD_TYPE=Release ..
