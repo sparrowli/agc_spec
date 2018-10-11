@@ -1,8 +1,7 @@
 pipeline {
   agent any
   environment {
-    // LDFLAGS = '/usr/local/opt/openssl/lib'
-    // CPPFLAGS = '/usr/local/opt/openssl/include'
+    TEST_USER = 'sparrowli'
   }
 
   stages {
@@ -13,6 +12,7 @@ pipeline {
           if [ ! -d ./release ]; then
             mkdir -p release
           fi
+          echo "${TEST_USER}"
           echo "cd release"
           cd release
 
