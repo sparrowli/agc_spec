@@ -43,6 +43,8 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/common_audio/channel_buffer_unittest.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_file.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
+	${PROJECT_SOURCE_DIR}/api/audio/audio_frame.cc
+	${PROJECT_SOURCE_DIR}/api/audio/audio_frame_unittest.cc
 	${PROJECT_SOURCE_DIR}/api/audio_codecs/audio_format.cc
 	${PROJECT_SOURCE_DIR}/api/units/time_delta.cc
 	${PROJECT_SOURCE_DIR}/api/units/time_delta_unittest.cc
