@@ -9,15 +9,12 @@ aux_source_directory(. DIR_SRCS)
 
 message(STATUS "CMAKE_SYSTEM_VERSION: [${CMAKE_SYSTEM_VERSION}")
 
-
-
 set (PROJECT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../)
 
 if (APPLE)
     set (FOUNDATION "-framework Foundation")
     message(STATUS "FOUNDATION: ${FOUNDATION}")
 endif()
-
 
 if (MSVC)
 else()
@@ -183,21 +180,34 @@ find_package(
 message(STATUS "OPENSSL_LIB: [${OPENSSL_LIB}]")
 
 find_library (
+	OPENSSL_CRYPTO
+		NAMES crypto
+)
+
+find_library (
+    OPENSSL
+		NAMES ssl
+)
+
+find_library (
     GTEST_LIB
     NAMES gtest libgtest # what to look for
     HINTS "${PROJECT_SOURCE_DIR}/lib" # where to look
     NO_DEFAULT_PATH # do not search system default paths
 )
 
-
+message(STATUS "OPENSSL_CRYPTO: [${OPENSSL_CRYPTO}]")
+message(STATUS "OPENSSL: [${OPENSSL}]")
 message(STATUS "GTEST_LIB: [${GTEST_LIB}]")
 
-
 include_directories (${PROJECT_SOURCE_DIR}
-  "${PROJECT_SOURCE_DIR}/include")
+  "${PROJECT_SOURCE_DIR}/include"
+	"/usr/local/opt/openssl/"
+)
+
 link_directories (${PROJECT_SOURCE_DIR}/lib)
 
 add_executable (test_spec ${PROJECT_SOURCE_FILES})
 #target_link_libraries(test_spec PUBLIC ${GTEST_LIB})
 #target_link_libraries(test_spec PUBLIC gtest)
-target_link_libraries(test_spec PUBLIC gtest gmock ${FOUNDATION} crypto ssl absl::base absl::optional absl::strings absl::memory)
+target_link_libraries(test_spec PUBLIC gtest gmock ${FOUNDATION} ${OPENSSL_CRYPTO} ${OPENSSL} absl::base absl::optional absl::strings absl::memory)

@@ -21,7 +21,7 @@ $ ./agc_spec
 ```oh-my-zsh
 % git clone --single-branch AGCSPEC ${url.git}
 % git submodule update --init --recursive
-% mkdir gtest_spec/release && cd gtest_spec
+% mkdir gtest_spec/release && cd gtest_spec/release
 # sometimes cmake cannot find openssl
 # might add openssl root directory to include_directories() in CMakeLists.txt
 % export LDFLAGS="/usr/local/opt/openssl/lib"
