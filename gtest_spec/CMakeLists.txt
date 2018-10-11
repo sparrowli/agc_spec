@@ -37,6 +37,10 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/digital_agc/digital_agc.c
 	${PROJECT_SOURCE_DIR}/digital_agc/analog_agc.c
 	${PROJECT_SOURCE_DIR}/digital_agc/signal_processing_library.c
+	${PROJECT_SOURCE_DIR}/common_audio/audio_util.cc
+	${PROJECT_SOURCE_DIR}/common_audio/audio_util_unittest.cc
+	${PROJECT_SOURCE_DIR}/common_audio/channel_buffer.cc
+	${PROJECT_SOURCE_DIR}/common_audio/channel_buffer_unittest.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_file.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
 	${PROJECT_SOURCE_DIR}/api/audio_codecs/audio_format.cc
@@ -44,7 +48,7 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/api/units/time_delta_unittest.cc
 	${PROJECT_SOURCE_DIR}/api/video/video_bitrate_allocation.cc
 	${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
-  ${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
+	${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/strings/audio_format_to_string.cc
 	${PROJECT_SOURCE_DIR}/base/strings/string_builder.cc
 	${PROJECT_SOURCE_DIR}/base/strings/string_builder_unittest.cc
@@ -137,11 +141,6 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/base/socketaddress_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/event_tracer_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/messagequeue_unittest.cc
-	
-	
-	
-	
-	
 	
 	${PROJECT_SOURCE_DIR}/base/copyonwritebuffer_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/sslstreamadapter_unittest.cc
