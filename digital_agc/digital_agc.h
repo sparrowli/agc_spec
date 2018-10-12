@@ -7,7 +7,7 @@
 #ifdef WEBRTC_AGC_DEBUG_DUMP
 #include <stdio.h>
 #endif
-#include "common_audio/signal_processing_library.h"
+#include "digital_agc/signal_processing_library.h"
 //#include "typedefs.h"  // NOLINT(build/include)
 
 // the 32 most significant bits of A(19) * B(26) >> 13
