@@ -1,4 +1,4 @@
-#include "signal_processing_library.h"
+#include "common_audio/signal_processing_library.h"
 
 int16_t WebRtcSpl_DivW32W16ResW16(int32_t num, int16_t den) {
     // Guard against division with 0

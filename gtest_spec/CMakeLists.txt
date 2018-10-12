@@ -34,13 +34,22 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/abseil-cpp)
 set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/audio_processing_impl.cc
 	${PROJECT_SOURCE_DIR}/gain_control_impl.cc
+	${PROJECT_SOURCE_DIR}/splitting_filter.cc
+	${PROJECT_SOURCE_DIR}/three_band_filter_bank.cc
 	${PROJECT_SOURCE_DIR}/digital_agc/digital_agc.c
 	${PROJECT_SOURCE_DIR}/digital_agc/analog_agc.c
-	${PROJECT_SOURCE_DIR}/digital_agc/signal_processing_library.c
+	${PROJECT_SOURCE_DIR}/common_audio/division_operations.c
+	${PROJECT_SOURCE_DIR}/common_audio/splitting_filter.c
+	${PROJECT_SOURCE_DIR}/common_audio/spl_sqrt.c
+	${PROJECT_SOURCE_DIR}/common_audio/spl_sqrt_floor.c
+	${PROJECT_SOURCE_DIR}/common_audio/resample_by_2.c
+	${PROJECT_SOURCE_DIR}/common_audio/copy_set_operations.c
+	${PROJECT_SOURCE_DIR}/common_audio/dot_product_with_scale.cc
 	${PROJECT_SOURCE_DIR}/common_audio/audio_util.cc
 	${PROJECT_SOURCE_DIR}/common_audio/audio_util_unittest.cc
 	${PROJECT_SOURCE_DIR}/common_audio/channel_buffer.cc
 	${PROJECT_SOURCE_DIR}/common_audio/channel_buffer_unittest.cc
+	${PROJECT_SOURCE_DIR}/common_audio/sparse_fir_filter.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_file.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
 	${PROJECT_SOURCE_DIR}/api/audio/audio_frame.cc
