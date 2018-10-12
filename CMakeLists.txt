@@ -18,5 +18,6 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
 	)
 
+include_directories (${PROJECT_SOURCE_DIR})
 
 add_library (audio_processing ${PROJECT_SOURCE_FILES})
