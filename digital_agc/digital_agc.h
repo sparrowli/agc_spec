@@ -1,7 +1,7 @@
 #ifndef MODULES_AUDIO_PROCESSING_AGC_LEGACY_DIGITAL_AGC_H_
 #define MODULES_AUDIO_PROCESSING_AGC_LEGACY_DIGITAL_AGC_H_
 
-#define WEBRTC_AGC_DEBUG_DUMP
+// #define WEBRTC_AGC_DEBUG_DUMP
 #include <stdint.h>  // for int32_t etc.
 #include <stddef.h>  // for size_t
 #ifdef WEBRTC_AGC_DEBUG_DUMP

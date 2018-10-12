@@ -6,7 +6,7 @@
 #include "gain_control_impl.h"
 #include "common_audio/wav_file.h"
 
-#define AGC_DEBUG_DUMP
+// #define AGC_DEBUG_DUMP
 #ifdef AGC_DEBUG_DUMP
 #include <stdio.h>
 #endif
