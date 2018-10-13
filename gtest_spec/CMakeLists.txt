@@ -42,7 +42,7 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/common_audio/splitting_filter.c
 	${PROJECT_SOURCE_DIR}/common_audio/spl_sqrt.c
 	${PROJECT_SOURCE_DIR}/common_audio/spl_sqrt_floor.c
-	${PROJECT_SOURCE_DIR}/common_audio/resample_by_2.c
+	
 	${PROJECT_SOURCE_DIR}/common_audio/copy_set_operations.c
 	${PROJECT_SOURCE_DIR}/common_audio/dot_product_with_scale.cc
 	${PROJECT_SOURCE_DIR}/common_audio/audio_util.cc
@@ -52,12 +52,33 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/common_audio/sparse_fir_filter.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_file.cc
 	${PROJECT_SOURCE_DIR}/common_audio/wav_header.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resample.c
+	${PROJECT_SOURCE_DIR}/common_audio/resample_48khz.c
+	${PROJECT_SOURCE_DIR}/common_audio/resample_by_2.c
+	${PROJECT_SOURCE_DIR}/common_audio/resample_by_2_internal.c
+	${PROJECT_SOURCE_DIR}/common_audio/resample_fractional.c
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/push_resampler.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/push_resampler_unittest.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/push_sinc_resampler.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/push_sinc_resampler_unittest.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/resampler.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/resampler_unittest.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/sinc_resampler.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/sinc_resampler_sse.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/sinc_resampler_unittest.cc
+	${PROJECT_SOURCE_DIR}/common_audio/resampler/sinusoidal_linear_chirp_source.cc
+
+
+
 	${PROJECT_SOURCE_DIR}/api/audio/audio_frame.cc
 	${PROJECT_SOURCE_DIR}/api/audio/audio_frame_unittest.cc
 	${PROJECT_SOURCE_DIR}/api/audio_codecs/audio_format.cc
 	${PROJECT_SOURCE_DIR}/api/units/time_delta.cc
 	${PROJECT_SOURCE_DIR}/api/units/time_delta_unittest.cc
 	${PROJECT_SOURCE_DIR}/api/video/video_bitrate_allocation.cc
+	${PROJECT_SOURCE_DIR}/base/memory/aligned_malloc.cc
+	${PROJECT_SOURCE_DIR}/base/memory/aligned_malloc_unittest.cc
+	${PROJECT_SOURCE_DIR}/base/memory/aligned_array_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/strings/audio_format_to_string.cc
@@ -173,6 +194,7 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/base/stringutils_unittest.cc
     ${PROJECT_SOURCE_DIR}/base/platform_thread_types.cc
     ${PROJECT_SOURCE_DIR}/system_wrappers/source/sleep.cc
+    ${PROJECT_SOURCE_DIR}/system_wrappers/source/cpu_features.cc
     ${PROJECT_SOURCE_DIR}/test/testsupport/fileutils.cc
     ${PROJECT_SOURCE_DIR}/test/testsupport/fileutils_unittest.cc
 	${PROJECT_SOURCE_DIR}/tools/input_audio_file.cc
