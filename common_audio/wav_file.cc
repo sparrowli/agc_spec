@@ -5,7 +5,7 @@
 
 #include "wav_header.h"
 
-namespace mixerengine {
+namespace webrtc {
 
 // To-Do: build the wave header
 static const WavFormat kWavFormat = kWavFormatPcm;
@@ -155,6 +155,6 @@ void WavWriter::Close() {
 	file_handle_ = NULL;
 }
 
-}  // namespace mixerengine 
+}  // namespace webrtc 
 
 // To-Do: C wrappers for the WavWriter class

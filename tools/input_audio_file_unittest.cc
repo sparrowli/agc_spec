@@ -10,7 +10,7 @@
 
 #include "gtest/gtest.h"
 
-namespace mixerengine {
+namespace webrtc {
 namespace test {
 
 TEST(TestInputAudioFile, DuplicateInterleaveSeparateSrcDst) {
@@ -51,4 +51,4 @@ TEST(TestInputAudioFile, DuplicateInterleaveSameSrcDst) {
 }
 
 }  // namespace test
-}  // namespace mixerengine
+}  // namespace webrtc
