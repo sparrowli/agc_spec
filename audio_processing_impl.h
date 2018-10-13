@@ -10,7 +10,7 @@
 #ifdef AGC_DEBUG_DUMP
 #include <stdio.h>
 #endif
-namespace mixerengine {
+namespace webrtc {
 
 static __inline short stoshort(float x){short y;y = (short)x;	if(x>32767)y=32767;if(x<-32768)y = -32768;return y;}
 
@@ -35,5 +35,5 @@ class AudioProcessingImpl : public AudioProcessing {
 #endif
 };
 
-}  // namespace mixerengine 
+}  // namespace webrtc 
 #endif  // INCLUDE_AUDIO_PROCESSING_AUDIO_PROCESSING_IMPL_H_

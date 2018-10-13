@@ -7,7 +7,7 @@
 
 #include "include/audio_processing.h"
 
-namespace mixerengine {
+namespace webrtc {
 
 //class ApmDataDumper;
 //class AudioBuffer;
@@ -80,5 +80,5 @@ class GainControlImpl : public GainControl {
   static int instance_counter_;
 };
 
-}  // namespace mixerengine
+}  // namespace webrtc
 #endif  // INCLUDE_AUDIO_PROCESSING_GAIN_CONTROL_IMPL_H_

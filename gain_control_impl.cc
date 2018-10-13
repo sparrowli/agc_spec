@@ -2,7 +2,7 @@
 
 #include "digital_agc/gain_control.h"
 
-namespace mixerengine {
+namespace webrtc {
 
 typedef void Handle;
 
@@ -433,4 +433,4 @@ int GainControlImpl::Configure() {
 	return error;
 }
 
-}  // namespace mixerengine 
+}  // namespace webrtc 

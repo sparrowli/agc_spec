@@ -4,13 +4,25 @@
 #include <stdint.h>
 #include <stddef.h>
 
-namespace mixerengine {
+namespace webrtc {
 
 class GainControl;
 
 class AudioProcessing {
 
  public:
+
+  // TODO(mgraczyk): Remove once all methods that use ChannelLayout are gone.
+  enum ChannelLayout {
+    kMono,
+    // Left, right.
+    kStereo,
+    // Mono, keyboard, and mic.
+    kMonoAndKeyboard,
+    // Left, right, keyboard, and mic.
+    kStereoAndKeyboard
+  };
+
   enum Error {
     // Fatal errors.
     kNoError = 0,
@@ -143,6 +155,6 @@ class StreamConfig {
   size_t num_frames_;
 };
 
-}  // namespace mixerengine
+}  // namespace webrtc
 
 #endif  // INCLUDE_AUDIO_PROCESSING_INCLUDE_AUDIO_PROCESSING_H_

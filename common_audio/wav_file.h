@@ -7,7 +7,7 @@
 #include <stddef.h>
 #include <string>
 
-namespace mixerengine {
+namespace webrtc {
 
 class WavFile {
  public:
@@ -69,7 +69,7 @@ class WavReader : public WavFile {
   FILE* file_handle_;  // Input file, owned by this class.
 };
 
-}  // namespace mixerengine
+}  // namespace webrtc
 
 extern "C" {
 #endif  // __cplusplus

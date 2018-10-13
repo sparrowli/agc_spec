@@ -7,7 +7,7 @@
 
 #include "base/checks.h"
 
-namespace mixerengine {
+namespace webrtc {
 namespace test {
 
 InputAudioFile::InputAudioFile(const std::string file_name, bool loop_at_end)
@@ -85,4 +85,4 @@ void InputAudioFile::DuplicateInterleaved(const int16_t* source,
 }
 
 }  // namespace test
-}  // namespace mixerengine
+}  // namespace webrtc

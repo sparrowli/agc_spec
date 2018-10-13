@@ -12,7 +12,7 @@
 
 #include "base/constructormagic.h"
 
-namespace mixerengine {
+namespace webrtc {
 namespace test {
 
 // Class for handling a looping input audio file.
@@ -51,5 +51,5 @@ class InputAudioFile {
 };
 
 }  // namespace test
-}  // namespace mixerengine
+}  // namespace webrtc
 #endif  // TOOLS_INPUT_AUDIO_FILE_H_

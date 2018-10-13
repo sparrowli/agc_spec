@@ -1,6 +1,6 @@
 #include "audio_processing_impl.h"
 
-namespace mixerengine {
+namespace webrtc {
 
 AudioProcessing* AudioProcessing::Create() {
 	AudioProcessingImpl* apm = new AudioProcessingImpl();
@@ -143,4 +143,4 @@ int AudioProcessingImpl::ProcessStream(int16_t* data, int num_frames) {
 	return error;
 }
 
-}  // namespace mixerengine 
+}  // namespace webrtc 

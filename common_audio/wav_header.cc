@@ -4,7 +4,7 @@
 #include <limits>
 #include <string>
 
-namespace mixerengine {
+namespace webrtc {
 
 namespace {
 
@@ -210,4 +210,4 @@ bool ReadWavHeader(ReadableWav* readable,
                             *bytes_per_sample, *num_samples);
 }
 
-}  // namespace mixerengine
+}  // namespace webrtc

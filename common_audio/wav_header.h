@@ -4,7 +4,7 @@
 #include <stddef.h>
 #include <stdint.h>
 
-namespace mixerengine {
+namespace webrtc {
 
 static const size_t kWavHeaderSize = 44;
 
@@ -45,6 +45,6 @@ bool ReadWavHeader(ReadableWav* readable,
                    size_t* bytes_per_sample,
                    size_t* num_samples);
 
-}  // namespace mixerengine 
+}  // namespace webrtc 
 
 #endif  // INCLUDE_AUDIO_PROCESSING_COMMON_AUDIO_WAV_HEAD_H_

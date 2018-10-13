@@ -33,6 +33,8 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/abseil-cpp)
 
 set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/audio_processing_impl.cc
+	${PROJECT_SOURCE_DIR}/audio_buffer.cc
+	${PROJECT_SOURCE_DIR}/audio_buffer_unittest.cc
 	${PROJECT_SOURCE_DIR}/gain_control_impl.cc
 	${PROJECT_SOURCE_DIR}/splitting_filter.cc
 	${PROJECT_SOURCE_DIR}/three_band_filter_bank.cc
