@@ -32,10 +32,11 @@ endif()
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/abseil-cpp)
 
 set (PROJECT_SOURCE_FILES
-	${PROJECT_SOURCE_DIR}/audio_processing_impl.cc
+	#${PROJECT_SOURCE_DIR}/audio_processing_impl.cc
 	${PROJECT_SOURCE_DIR}/audio_buffer.cc
 	${PROJECT_SOURCE_DIR}/audio_buffer_unittest.cc
-	${PROJECT_SOURCE_DIR}/gain_control_impl.cc
+	${PROJECT_SOURCE_DIR}/gain_control_impl_webrtc.cc
+	${PROJECT_SOURCE_DIR}/gain_control_unittest.cc
 	${PROJECT_SOURCE_DIR}/splitting_filter.cc
 	${PROJECT_SOURCE_DIR}/three_band_filter_bank.cc
 	${PROJECT_SOURCE_DIR}/digital_agc/digital_agc.c
@@ -189,6 +190,7 @@ set (PROJECT_SOURCE_FILES
 	
 	${PROJECT_SOURCE_DIR}/base/checks.cc
 	${PROJECT_SOURCE_DIR}/base/gunit.cc
+	${PROJECT_SOURCE_DIR}/base/swap_queue_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/string_to_number.cc
 	${PROJECT_SOURCE_DIR}/base/string_to_number_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/stringencode.cc
@@ -197,6 +199,8 @@ set (PROJECT_SOURCE_FILES
     ${PROJECT_SOURCE_DIR}/base/platform_thread_types.cc
     ${PROJECT_SOURCE_DIR}/system_wrappers/source/sleep.cc
     ${PROJECT_SOURCE_DIR}/system_wrappers/source/cpu_features.cc
+    ${PROJECT_SOURCE_DIR}/test/audio_buffer_tools.cc
+    ${PROJECT_SOURCE_DIR}/test/bitexactness_tools.cc
     ${PROJECT_SOURCE_DIR}/test/testsupport/fileutils.cc
     ${PROJECT_SOURCE_DIR}/test/testsupport/fileutils_unittest.cc
 	${PROJECT_SOURCE_DIR}/tools/input_audio_file.cc
