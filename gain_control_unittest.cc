@@ -215,7 +215,8 @@ TEST(GainControlBitExactnessTest,
      DISABLED_Mono8kHz_AdaptiveDigital_Tl10_SL50_CG5_Lim_AL0_100) {
 #endif
   const int kStreamAnalogLevelReference = 50;
-  const float kOutputReference[] = {-0.004028f, -0.001678f, 0.000946f};
+  //const float kOutputReference[] = {-0.004028f, -0.001678f, 0.000946f};
+  const float kOutputReference[] = {-0.003967f, -0.001648f, 0.000946f};
   RunBitExactnessTest(8000, 1, GainControl::Mode::kAdaptiveDigital, 10, 50, 5,
                       true, 0, 100, kStreamAnalogLevelReference,
                       kOutputReference);
@@ -261,7 +262,7 @@ TEST(GainControlBitExactnessTest,
      DISABLED_Mono32kHz_AdaptiveDigital_Tl10_SL50_CG5_Lim_AL0_100) {
 #endif
   const int kStreamAnalogLevelReference = 50;
-  const float kOutputReference[] = {-0.006104f, -0.005524f, -0.004974f};
+  const float kOutputReference[] = {-0.006042f, -0.005524f, -0.004974f};
   RunBitExactnessTest(32000, 1, GainControl::Mode::kAdaptiveDigital, 10, 50, 5,
                       true, 0, 100, kStreamAnalogLevelReference,
                       kOutputReference);
@@ -276,7 +277,7 @@ TEST(GainControlBitExactnessTest,
      DISABLED_Mono48kHz_AdaptiveDigital_Tl10_SL50_CG5_Lim_AL0_100) {
 #endif
   const int kStreamAnalogLevelReference = 50;
-  const float kOutputReference[] = {-0.006104f, -0.005524f, -0.004974f};
+  const float kOutputReference[] = {-0.006042f, -0.005524f, -0.004974f};
   RunBitExactnessTest(32000, 1, GainControl::Mode::kAdaptiveDigital, 10, 50, 5,
                       true, 0, 100, kStreamAnalogLevelReference,
                       kOutputReference);
@@ -412,7 +413,7 @@ TEST(GainControlBitExactnessTest,
      DISABLED_Mono16kHz_AdaptiveDigital_Tl40_SL100_CG5_Lim_AL0_100) {
 #endif
   const int kStreamAnalogLevelReference = 100;
-  const float kOutputReference[] = {-0.008728f, -0.006134f, -0.003845f};
+  const float kOutputReference[] = {-0.008667f, -0.006104f, -0.003845f};
   RunBitExactnessTest(16000, 1, GainControl::Mode::kAdaptiveDigital, 40, 100, 5,
                       true, 0, 100, kStreamAnalogLevelReference,
                       kOutputReference);
@@ -427,7 +428,7 @@ TEST(GainControlBitExactnessTest,
      DISABLED_Mono16kHz_AdaptiveDigital_Tl10_SL100_CG30_Lim_AL0_100) {
 #endif
   const int kStreamAnalogLevelReference = 100;
-  const float kOutputReference[] = {-0.005859f, -0.004120f, -0.002594f};
+  const float kOutputReference[] = {-0.005615f, -0.003937f, -0.002472f};
   RunBitExactnessTest(16000, 1, GainControl::Mode::kAdaptiveDigital, 10, 100,
                       30, true, 0, 100, kStreamAnalogLevelReference,
                       kOutputReference);
