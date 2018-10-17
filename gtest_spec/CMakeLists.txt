@@ -77,16 +77,16 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/api/audio/audio_frame_unittest.cc
 	${PROJECT_SOURCE_DIR}/api/audio_codecs/audio_format.cc
 	${PROJECT_SOURCE_DIR}/api/units/time_delta.cc
-	${PROJECT_SOURCE_DIR}/api/units/time_delta_unittest.cc
+	#${PROJECT_SOURCE_DIR}/api/units/time_delta_unittest.cc
 	${PROJECT_SOURCE_DIR}/api/video/video_bitrate_allocation.cc
 	${PROJECT_SOURCE_DIR}/base/memory/aligned_malloc.cc
-	${PROJECT_SOURCE_DIR}/base/memory/aligned_malloc_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/memory/aligned_array_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/memory/aligned_malloc_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/memory/aligned_array_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/strings/audio_format_to_string.cc
 	${PROJECT_SOURCE_DIR}/base/strings/string_builder.cc
-	${PROJECT_SOURCE_DIR}/base/strings/string_builder_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/strings/string_builder_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/logging.cc
 	${PROJECT_SOURCE_DIR}/base/nullsocketserver.cc
 	${PROJECT_SOURCE_DIR}/base/criticalsection.cc
@@ -110,36 +110,36 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/base/virtualsocketserver.cc
 	${PROJECT_SOURCE_DIR}/base/asynctcpsocket.cc
 	${PROJECT_SOURCE_DIR}/base/asyncudpsocket.cc
-	${PROJECT_SOURCE_DIR}/base/asyncudpsocket_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/asyncudpsocket_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/asyncresolverinterface.cc
 	${PROJECT_SOURCE_DIR}/base/logging_mac.mm
 	${PROJECT_SOURCE_DIR}/base/event.cc
 	${PROJECT_SOURCE_DIR}/base/event_tracer.cc
-	${PROJECT_SOURCE_DIR}/base/atomicops_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/strings/string_builder_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/criticalsection_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/ipaddress_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/bind_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/refcountedobject_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/atomicops_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/strings/string_builder_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/criticalsection_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/ipaddress_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/bind_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/refcountedobject_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/asyncinvoker.cc
-	${PROJECT_SOURCE_DIR}/base/thread_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/thread_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/testutils.cc
-	${PROJECT_SOURCE_DIR}/base/physicalsocketserver_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/physicalsocketserver_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/zero_memory.cc
-	${PROJECT_SOURCE_DIR}/base/zero_memory_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/stringencode_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/stringutils_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/byteorder_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/nullsocketserver_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/zero_memory_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/stringencode_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/stringutils_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/byteorder_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/nullsocketserver_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/helpers.cc
-	${PROJECT_SOURCE_DIR}/base/helpers_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/helpers_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/openssldigest.cc
 	${PROJECT_SOURCE_DIR}/base/messagedigest.cc
 	${PROJECT_SOURCE_DIR}/base/copyonwritebuffer.cc
 	${PROJECT_SOURCE_DIR}/base/rtccertificate.cc
 	${PROJECT_SOURCE_DIR}/base/sslfingerprint.cc
 	${PROJECT_SOURCE_DIR}/base/opensslutility.cc
-	${PROJECT_SOURCE_DIR}/base/opensslutility_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/opensslutility_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/opensslcertificate.cc
 	${PROJECT_SOURCE_DIR}/base/sslcertificate.cc
 	${PROJECT_SOURCE_DIR}/base/opensslidentity.cc
@@ -152,59 +152,59 @@ set (PROJECT_SOURCE_FILES
 	${PROJECT_SOURCE_DIR}/base/ssladapter.cc
 	${PROJECT_SOURCE_DIR}/base/opensslsessioncache.cc
 	${PROJECT_SOURCE_DIR}/base/openssladapter.cc
-	${PROJECT_SOURCE_DIR}/base/ssladapter_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/ssladapter_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/socketstream.cc
 	${PROJECT_SOURCE_DIR}/base/stream.cc
-	${PROJECT_SOURCE_DIR}/base/stream_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/stream_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/numerics/safe_compare_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/numerics/safe_minmax_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/fakeclock.cc
-	${PROJECT_SOURCE_DIR}/base/virtualsocket_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/asynctcpsocket_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/buffer_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/thread_checker_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/socket_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/event_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/logging_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/testclient_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/platform_thread_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/signalthread_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/timeutils_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/thread_annotations_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/stringize_macros_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/string_to_number_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/socketaddress_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/event_tracer_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/messagequeue_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/virtualsocket_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/asynctcpsocket_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/buffer_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/thread_checker_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/socket_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/event_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/logging_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/testclient_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/platform_thread_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/signalthread_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/timeutils_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/thread_annotations_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/stringize_macros_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/string_to_number_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/socketaddress_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/event_tracer_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/messagequeue_unittest.cc
 	
-	${PROJECT_SOURCE_DIR}/base/copyonwritebuffer_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/sslstreamadapter_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/copyonwritebuffer_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/sslstreamadapter_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/bufferqueue.cc
-	${PROJECT_SOURCE_DIR}/base/bufferqueue_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/rtccertificate_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/openssladapter_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/messagedigest_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/opensslsessioncache_unittest.cc
-	${PROJECT_SOURCE_DIR}/base/sslidentity_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/bufferqueue_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/rtccertificate_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/openssladapter_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/messagedigest_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/opensslsessioncache_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/sslidentity_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/fakesslidentity.cc
 	
 	${PROJECT_SOURCE_DIR}/base/checks.cc
 	${PROJECT_SOURCE_DIR}/base/gunit.cc
-	${PROJECT_SOURCE_DIR}/base/swap_queue_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/swap_queue_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/string_to_number.cc
-	${PROJECT_SOURCE_DIR}/base/string_to_number_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/string_to_number_unittest.cc
 	${PROJECT_SOURCE_DIR}/base/stringencode.cc
 	${PROJECT_SOURCE_DIR}/base/stringutils.cc
-	${PROJECT_SOURCE_DIR}/base/stringutils_unittest.cc
+	#${PROJECT_SOURCE_DIR}/base/stringutils_unittest.cc
     ${PROJECT_SOURCE_DIR}/base/platform_thread_types.cc
     ${PROJECT_SOURCE_DIR}/system_wrappers/source/sleep.cc
     ${PROJECT_SOURCE_DIR}/system_wrappers/source/cpu_features.cc
     ${PROJECT_SOURCE_DIR}/test/audio_buffer_tools.cc
     ${PROJECT_SOURCE_DIR}/test/bitexactness_tools.cc
     ${PROJECT_SOURCE_DIR}/test/testsupport/fileutils.cc
-    ${PROJECT_SOURCE_DIR}/test/testsupport/fileutils_unittest.cc
+		#${PROJECT_SOURCE_DIR}/test/testsupport/fileutils_unittest.cc
 	${PROJECT_SOURCE_DIR}/tools/input_audio_file.cc
-	${PROJECT_SOURCE_DIR}/tools/input_audio_file_unittest.cc
+	#${PROJECT_SOURCE_DIR}/tools/input_audio_file_unittest.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/test_spec.cc
 	)
 
