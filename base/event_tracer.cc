@@ -9,11 +9,10 @@
  */
 #include "base/event_tracer.h"
 
-#include <inttypes.h>
-
 #include <string>
 #include <vector>
 
+#include "base/format_macros.h"
 #include "base/atomicops.h"
 #include "base/checks.h"
 #include "base/criticalsection.h"

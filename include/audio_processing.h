@@ -45,6 +45,13 @@ class AudioProcessing {
     kBadStreamParameterWarning = -13
   };
 
+  enum NativeRate {
+    kSampleRate8kHz = 8000,
+    kSampleRate16kHz = 16000,
+    kSampleRate32kHz = 32000,
+    kSampleRate48kHz = 48000,
+  };
+
 	virtual int ProcessStream(int16_t* data, int num_frames) = 0;
 
 	virtual GainControl* gain_control() const = 0;
